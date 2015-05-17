@@ -14,16 +14,16 @@ class UsersController < ApplicationController
 
     def create
         # Get user to see if they have already signed up
-        @user = User.find_by_email(params[:user][:email]);
+        @user = User.find_by_email(params[:user][:email].downcase);
             
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
 
-            cur_ip = IpAddress.find_by_address(request.env['HTTP_X_FORWARDED_FOR'])
+            cur_ip = IpAddress.find_by_address(request.remote_ip)
 
             if !cur_ip
                 cur_ip = IpAddress.create(
-                    :address => request.env['HTTP_X_FORWARDED_FOR'],
+                    :address => request.remote_ip,
                     :count => 0
                 )
             end
@@ -35,14 +35,14 @@ class UsersController < ApplicationController
                 cur_ip.save
             end
 
-            @user = User.new(:email => params[:user][:email])
+            @user = User.new(:email => params[:user][:email].downcase)
 
             @referred_by = User.find_by_referral_code(cookies[:h_ref])
 
             puts '------------'
             puts @referred_by.email if @referred_by
             puts params[:user][:email].inspect
-            puts request.env['HTTP_X_FORWARDED_FOR'].inspect
+            puts request.remote_ip.inspect
             puts '------------'
 
             if !@referred_by.nil?
