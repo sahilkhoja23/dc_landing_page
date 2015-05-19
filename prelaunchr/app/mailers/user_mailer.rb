@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-    default from: "DraftCrunch <welcome@draftcrunch.com>"
+    default from: "DraftCrunch Team <welcome@draftcrunch.com>"
 
     def signup_email(user)
         @user = user

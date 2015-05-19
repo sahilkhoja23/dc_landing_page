@@ -74,8 +74,8 @@ Prelaunchr::Application.configure do
     address: 'smtp.gmail.com',
     port: 587,
     domain: 'draftcrunch.com',
-    user_name: 'vivek@draftcrunch.com',
-    password: 'master26449',
+    user_name: 'welcome@draftcrunch.com',
+    password: 'welcome2thejungle',
     authentication: 'plain',
     enable_starttls_auto: true}
 
