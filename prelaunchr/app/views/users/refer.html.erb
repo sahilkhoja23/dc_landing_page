@@ -73,14 +73,16 @@
                 words = 'friends have'
             end
 
-        %>
+	user_id = @user.id
+
+	%>
 
         <% if referrals_count == 0 %>
             <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
         <% else %>
             <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
         <% end %>
-        <p class="check brandon">Keep checking</p>
+	<p class="check brandon">You are number <span><%= user_id %></span> in line, keep checking !</p> 
 
         <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>        
         <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
