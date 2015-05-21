@@ -12,9 +12,27 @@
     <% else %>
         <div class="key"></div>
         <p class="byline brandon">Be the first to know</p>
+
+<% 
+
+x = Random.new
+r = x.rand(0..100)
+if r <= 50
+
+%>
+
+        <%= form_for @user, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :firstname, :placeholder => "Enter firstname", :class => "email brandon" %>
+            <input class="submit brandon" name="commit" type="text" name="First Name" />
+        <% end %>
+
+<%
+end
+%>
+
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
-        <% end %>
-    <% end %>
+        <% end %> 
+   <% end %>
 </div>
