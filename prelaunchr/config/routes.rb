@@ -12,6 +12,8 @@ Prelaunchr::Application.routes.draw do
 
   match 'privacy-policy' => 'users#policy'
 
+  match 'multiple-ip' => 'users#newip'
+
   unless Rails.application.config.consider_all_requests_local
       match '*not_found', to: 'users#redirect', :format => false
   end
