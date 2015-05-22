@@ -1,3 +1,15 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63279107-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
 <div class="hero">
     <p class="large brandon">Harry&#8217;s is live</p>
     <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
@@ -12,23 +24,6 @@
     <% else %>
         <div class="key"></div>
         <p class="byline brandon">Be the first to know</p>
-
-<% 
-
-x = Random.new
-r = x.rand(0..100)
-if r <= 50
-
-%>
-
-        <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :firstname, :placeholder => "Enter First Name", :class => "email brandon" %>
-            <input class="submit brandon" name="commit" type="text" name="First Name" />
-        <% end %>
-
-<%
-end
-%>
 
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>

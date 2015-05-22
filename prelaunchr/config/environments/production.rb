@@ -71,13 +71,12 @@ Prelaunchr::Application.configure do
   # ActionMailer settings
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: 'smtp.sendgrid.net',
     port: 587,
-    domain: 'draftcrunch.com',
-    user_name: 'welcome@draftcrunch.com',
-    password: 'welcome2thejungle',
+    domain: 'sendgrid.com',
+    user_name: 'DraftCrunch',
+    password: 'Eggs&Toast#3',
     authentication: 'plain',
     enable_starttls_auto: true}
-
 
 end
