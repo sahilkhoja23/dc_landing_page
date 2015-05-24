@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20130312045541) do
     t.string   "email"
     t.string   "referral_code"
     t.integer  "referrer_id"
+    t.integer  "method_ab"	
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

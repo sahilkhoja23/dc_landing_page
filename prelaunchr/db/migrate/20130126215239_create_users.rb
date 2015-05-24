@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :referral_code
       t.integer :referrer_id
-
+      t.integer :method_ab
       t.timestamps
     end
   end
