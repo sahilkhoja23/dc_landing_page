@@ -1,0 +1,397 @@
+* {
+  border-radius: 0 !important;
+
+}
+html, body {
+	margin: 0;
+	padding: 0;
+<<<<<<< HEAD
+  padding-left: 0;
+=======
+	background: #F1F2F3;
+>>>>>>> 2495ee20baff5926c91bdaab53c27a113973dd28
+;
+	background: #F1F2F3;
+}
+.features h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	text-align: center;
+	font-size: 7em;
+}
+
+.features p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	font-size: 2em;
+	margin: 45px 200px 41px;
+
+}
+
+.features {
+	background-color: #FDBC4E;
+	padding-top: 20px;
+  	padding-bottom: 20px;
+  	margin-top: 30px;
+  	margin-bottom: 30px;
+  	opacity: .9;
+}
+
+.container {
+	/* margin: 0 auto; */
+	width: 100%;
+}
+
+.header {
+	background-image: url(/assets/home/rageon.png);
+	background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0em -30em;
+ 
+}
+
+.Parallax {
+	background-image: url(/assets/home/Textured_Background-grayscale.jpg);
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+.Parallax div:first-child {
+    padding-top: 3em;
+}
+
+.Parallax div:last-child {
+    padding-bottom: 3em;
+}
+
+.movingObject {
+	width: 100%;
+	
+}
+ .logo {
+ 	width: 163px;
+ 	padding-top: 12em;
+ 	padding-bottom: 4em;
+}
+
+.slogan {
+	color: white;
+  	text-align: center;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 100;
+  	font-size: 3em;
+	padding-bottom: 1em;
+}
+
+.emailInput {
+	font-size: 23px;
+        font-family: 'Roboto', Sans-serif;
+	width: 32em;
+	height: 3em;
+	padding: 10px;
+	padding-bottom: 1em;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.25s 0.25s ease; 
+  opacity: 0;
+}
+
+.emailInput::-webkit-input-placeholder {
+    font-family: 'Roboto', sans-serif;
+  	font-weight: 100;
+  	font-size: 1.25em
+}
+
+.emailInput:-ms-input-placeholder {
+    font-family:'Roboto', sans-serif;
+  	font-weight: 100;
+}
+
+.emailInput:-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+  	font-weight: 100;
+}
+
+.emailInput::-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+  	font-weight: 100;
+}
+
+input:focus { 
+    outline: none !important;    
+}
+
+input[type="text"]
+{
+    font-size:13px;
+    font-family:'Roboto', sans-serif;
+  	
+    font-weight: 100;
+}
+
+.emailInputAndButton {
+	padding-bottom: 2em;
+	text-align: -webkit-center;
+	display: auto;
+	text-align: center;
+}
+
+.signUp {
+	padding-bottom: 3px;
+	padding-top: 5px;
+	position: relative;
+	top: 6px;
+	padding-left: 38px;
+	padding-right: 38px;
+	font-size: 23px;
+	font-family: 'Roboto', Sans-serif;
+	background: #FFC147;
+	border: none;
+	margin-left: 7px;
+}
+
+.watch {
+    color: white;
+	
+    font-weight: 400;
+    font-size: 2.25em;
+    /* float: left; */
+    display: inline-block;
+    padding-bottom: 2em;
+    padding-right: 30px;
+}
+.watchFooter {
+    color: white;
+  
+    font-weight: 400;
+    font-size: 2.25em;
+    /* float: left; */
+    display: inline-block;
+    padding-bottom: 1em;
+    padding-right: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.watchButton {
+    /* width: 100%; */
+	
+    display: inline;
+    position: relative;
+    background: url(/assets/home/logo2.png);
+    background-size: 100%;
+    width: 59px;
+    height: 59px;
+    display: inline-block;
+}
+
+#pop-up{
+    position : absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.5);
+}
+
+#iframe{
+    width: 80%;
+    margin: 20% auto;
+    height: 60%;
+    border: 1px solid black;
+}
+
+
+
+#page-cover {
+    display: none;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+}
+
+#youtubeVideo {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	top: 50%;
+	left: 50%;
+	margin-top: -207.5px;
+	margin-left: -329px;
+}
+
+iframe {
+    height: 273%;
+    width: 216%;
+
+}
+#watchPosition {
+  padding-bottom: 1em;
+}
+
+.asSeenOn{
+  background-color: #F1F2F3; 
+  display: inline-block;
+}
+
+.asSeenOn img {
+	
+}
+.asSeenOnTitle{
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.25em;
+    /* float: left; */
+    display: block;
+    padding-bottom: 0.5em;
+    /*padding-left: 18em;*/
+    padding-top: 1em;
+    font-family: 'Roboto', Sans-serif;
+    
+}
+
+#youtubeVideo img {
+    width: 1.5em; 
+    margin-left: 98%;
+}
+.footer {
+  color: black;
+  background-color: #000;
+   
+}
+
+#ytplayer {
+	
+}
+
+.nopadding {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.navbar {
+  position: relative;
+  min-height: 67px;
+  margin-bottom: 0px;
+  background-image: url(/assets/home/emailnav.png);
+  background-color: black;
+  /* background-size: 100%; */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+}
+
+.leftnavbar {
+  position: relative;
+  min-height: 67px;
+  margin-bottom: 0px;
+  background-image: url(/assets/home/navbar.jpg);
+  background-color: black;
+  /* background-size: 100%; */
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  z-index: 9999;
+}
+
+.icons figure {
+	display: inline-block;
+	vertical-align: top;
+}
+
+figcaption {
+    text-align: center;
+	
+    display: table-caption;
+    padding-top: 2em;
+    font-family: 'Roboto', SANS-SERIF;
+    font-size: 2em;
+    width: 362px;
+    margin-left: -3em;
+}
+
+/*VISIT HTML*/
+.customEmail {
+  background-color: #FDBC4E;
+}
+.customLink {
+  width: 23em;
+  height: 3em;
+  padding: 10px;
+}
+.customLink::-webkit-input-placeholder {
+   text-align: center;
+}
+
+.customLink:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+.customLink::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+.customLink:-ms-input-placeholder {  
+   text-align: center; 
+}
+.customSign {
+    color: black;
+  
+    font-weight: 400;
+    font-size: 2.25em;
+    /* float: left; */
+    display: inline-block;
+    padding-right: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-right: -1em;
+}
+.fa-2x {
+  font-size: 2em;
+  padding-right: 1em;
+}
+.slogan2 {
+  color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    
+  font-size: 6em;
+  padding-top: 2em;
+}
+.reference  {
+  color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+  font-size: 7em;
+  margin-bottom: 1em;
+}
+
+.emailHeader {
+    font-size: 2em;
+	
+    text-align: center;
+    font-family: 'Roboto', San
+
+h3 {
+
+}
+
+.contact {
+
+};
+    color: black;
+
+a {
+	text-decoration: none;
+}
