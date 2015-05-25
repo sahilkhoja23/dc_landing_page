@@ -5,30 +5,29 @@
 
 	
 	<script src="<%= @url %>/assets/jquery-2.1.4.min.js"></script>
+	<script src="<%= @url %>/assets/jquery.stellar.min.js"></script>
 	<!-- Youtube Initializer -->
 	<script>
 
-		$(window).load(function(e){
-			$('#videoTriggerButton').click(function(){
-	    		$("#page-cover").css("opacity",0.9).fadeIn(300, function() {
-	    			$('#youtubeVideo').fadeIn(300);
-	    		});
-	 		});
-	 		$('#xOutOfVideo').click(function(){
-	    		$("#youtubeVideo").fadeOut(300, function() {
-	    			$('#page-cover').fadeOut(300);
-	    		});
-	 		});
-		});
-	</script>
-	<!-- End Youtube Initializer -->
+                $(window).load(function(e){
+                        $('#videoTriggerButton').click(function(){
+                        $("#page-cover").css("opacity",0.9).fadeIn(300, function() {
+                                $('#youtubeVideo').fadeIn(300);
+                        });
+                        });
+                        $('#xOutOfVideo').click(function(){
+                        $("#youtubeVideo").fadeOut(300, function() {
+                                $('#page-cover').fadeOut(300);
+                        });
+                        });
+                });
+        </script>
+        <!-- End Youtube Initializer -->
+        <!-- Parallax -->
+        <script>
+                $(window).stellar();
 
-	<!-- Animation Source -->
-	<script src="<%= @url %>/assets/wow.min.js"></script>
-	<script>
-		 new WOW().init();
-	</script>
-    <script type="text/javascript" src="<%= @url %>/assets/app.js"></script>
+        </script>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -48,7 +47,7 @@
 	<link rel="stylesheet" href="<%= @url %>/assets/animate.css">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="<%= @url %>/assets/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="<%= @url %>/assets/favicon.png" type="image/x-icon" />
 	
 </head>
 <body>
@@ -58,18 +57,18 @@
 	<div id="page-cover"> <!-- Black Overlay -->
 	</div>
 
-	<!-- Youtube Video -->
-	<div id="youtubeVideo">
-		<a id="xOutOfVideo"><img src="<%= @url %>/assets/home/xbutton.png" style="cursor: pointer;"></a>
-		<object id="ytplayer" style="height: 390px; width: 640px">
-    		<param name="movie" value="http://www.youtube.com/v/Upd-07pbo40?version=3&amp;enablejsapi=1">
-    		<param name="allowScriptAccess" value="always">
-    		<embed id="ytplayer" src="http://www.youtube.com/v/Upd-07pbo40?version=3&amp;enablejsapi=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="390">
-		</object>
-	</div>
+        <!-- Youtube Video -->
+        <div id="youtubeVideo">
+                <a id="xOutOfVideo"><img src="<%= @url %>/assets/home/xbutton.png"></a>
+                <object id="ytplayer" style="height: 390px; width: 640px">
+                <param name="movie" value="http://www.youtube.com/v/O19G_85S0XI?version=3&amp;enablejsapi=1?rel=0&autoplay=1">
+        <param name="allowScriptAccess" value="always">
+        <embed id="ytplayer" src="http://www.youtube.com/v/O19G_85S0XI?version=3&amp;enablejsapi=1?rel=0&autoplay=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="390">
+                </object>
+        </div>
 
-	<!-- End Youtube Video Cover Page -->
-	
+        <!-- End Youtube Video Cover Page -->	
+
 	<!-- Navigation -->
 	<nav class="leftnavbar">
   		<div class="container-fluid">
@@ -81,78 +80,78 @@
 @user.method_ab = 0
 %>
 
-    <div class="container nopadding">
-	<!-- Welcome Screen -->
-	<div class="row nopadding Welcome">
+    <div class="container-fluid nopadding">
+        <!-- Welcome Screen -->
+        <div class="row-fluid nopadding Welcome">
         <div class="col-lg-12 nopadding header">
-        	<center><img class="logo" src="<%= @url %>/assets/home/logo2.png"></center>
-        	<h1 class="slogan">Better Daily Fantasy Sports line-ups, faster.</h1>
-        	<div class="emailInputAndButton">
+                <center><img class="logo" src="<%= @url %>/assets/home/logo2.png"></center>
+                <h1 class="slogan"><strong>Better Daily Fantasy Sports line-ups, faster.</strong></h1>
+                <div class="emailInputAndButton">
 
-        <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Enter Email", :class => "emailInput" %>
-            <input class="signUp" name="email" type="submit" value="Sign Up" />
-	    <%= f.hidden_field :method_ab, :value => @user.method_ab %>	
-        <% end %>
+        <form action="/users/create" id="new_user" method="post">
+		<input type="email" id="user_email" name="user[email]" class="emailInput" required="" placeholder="Enter Email">
+		<button class="signUp"><strong>Get Early Access</strong></button>   
+            	<input id="user_method_ab" name="user[method_ab]" type="hidden" value="0" />
+</form>
 
-        	</div>
-        	<div class="watchTutorialAndButton">	
-        		<center>
-        			<h1 class="watch">Watch Tutorial</h1>
-        			<a id="videoTriggerButton"><img src="<%= @url %>/assets/home/watch.png" id="watchPosition" style="cursor: pointer;"></a>
-        		</center>
-        	</div>
-    	</div>
+                </div>
+                <div class="watchTutorialAndButton">
+                        <center>
+                                <h1 class="watch">Watch Tutorial</h1>
+                                <a id="videoTriggerButton"><img src="<%= @url %>/assets/home/watch.png" id="watchPosition" style="cursor: pointer;"></a>
+                        </center>
+                </div>
+        </div>
     </div>
+        </div>
+        <!-- End Welcome Screen -->
 			
-	<!-- Animated Icons -->
-	    <div class="col-lg-12 nopadding" style="padding-top: 5em; padding-bottom: 5em;">
+        <!-- Parallax Screen -->
+            <div class="row Parallax nopadding" data-stellar-background-ratio="0.2">
+                        <div class="threeicons">
+                                <div class="col-md-4 col-sm-12">
+                                        <center>
+                                                <img src="<%= @url %>/assets/home/clock.png" style="position: relative;  visibility: visible;">
+                                                <figcaption>Spend Less Time Researching</figcaption>
+                                        </center>
+                                </div>
 
-		        	<div class="col-md-offset-1 col-md-2 ">
-		        		<img src="<%= @url %>/assets/home/clock.png" class="wow clock fadeInLeft  data-wow-duration= animated" 2s""="" style="position: relative; margin-left: -4em; visibility: visible; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;"> 
-		        		<img src="<%= @url %>/assets/home/hand.png" class="wow hand rotateIn  data-wow-duration= animated" 2s""="" style="position: relative; margin-left: 7em; margin-top: -15em; visibility: visible; animation-name: rotateIn; -webkit-animation-name: rotateIn;">
-		        		<figcaption style="padding-left: 1em;">Spend Less Time Researching</figcaption>
-		        	</div>
+                                <div class="col-md-4 col-sm-12">
+                                        <center>
+                                                <img src="<%= @url %>/assets/home/Graphs.png" style="position: relative; margin-top: 142px; visibility: visible;">
+                                                        <figcaption>Analyze Complex Information</figcaption>
+                                                </center>
+                                </div>
 
-	        		<div class="col-md-offset-2 col-md-2">
-	        			<img src="<%= @url %>/assets/home/Graphs.png" class="wow graphs fadeInLeft  data-wow-duration= animated" 2s""="" style="position: relative; margin-left: -5em; margin-top: 96px; visibility: visible; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
-						<figcaption>Analyze Complex Information</figcaption>
-						<img src="<%= @url %>/assets/home/lines.png" class="wow lines fadeIn  data-wow-duration= animated" 2s"="" data-wow-delay="0.25s" "="" style="position: relative; margin-top: -39em; margin-left: -10em; visibility: visible; animation-delay: 1s; -webkit-animation-delay: 1s; animation-name: fadeIn; -webkit-animation-name: fadeIn;">
-						
-	        		</div>
-	        			
-	        		<div class="col-md-offset-2 col-md-2 ">
-	        			<img src="<%= @url %>/assets/home/Trophy.png" style="margin-left: -6em; margin-top: 96px;visibility: visible; animation-name: rotateInUpLeft; -webkit-animation-name: rotateInUpLeft;" class="wow trophy rotateInUpLeft  data-wow-duration= animated" 2s""="">
-	        			<figcaption style="margin-left: -74px;">Gain a Competitive Edge</figcaption>
-	        		</div>
-    	</div>
-	</div>
-	<!-- End Welcome Screen -->
+                                <div class="col-md-4 col-sm-12">
+                                        <center>
+                                                <img src="<%= @url %>/assets/home/Trophy.png" style="margin-top: 142px;visibility: visible;">
+                                                <figcaption>Gain a Competitive Edge</figcaption>
+                                        </center>
+                                </div>
+                        </div>
+                <div class="col-md-12 nopadding">
+                        <div class="features ">
+                                <h1>Optimization Tools</h1>
+                                <p>Gives you the tools that allow you to research on one site instead of ten. Find the paramteters that matter most to you and implement those findings instantaneously.</p>
+                        </div>
+                </div>
+                <div class="col-sm-12 nopadding">
 
-	<!-- Parallax Screen -->
-	    <div class="row Parallax nopadding">
-	        <div class="col-md-12 ">
-	        	<div class="features ">
-	        	
-	        		<h1>Optimization Tools</h1>
-	        		<p>Gives you the tools that allow you to research on one site instead of ten. Find the paramteters that matter most to you and implement those findings instantaneously.</p> 
-	        	</div>
-	        </div>
-	        <div class="col-sm-12 ">
-	
-	        	<div class="features">
-	        		<h1>Data Scientists</h1>
-	        		<p>The best Data in the business giving you better insights than any other site in the market place.</p>
-	        	</div>
-	        </div>
-	        <div class="col-sm-12 ">
-	        	<div class="features">
-	        		<h1>Personal Analysis</h1>
-	        		<p>Back test all of your choices and get personalized information, allowing you to know what is working and making you money.</p>
-	        	</div>
-	        </div>
-	    </div>
-	<!-- End Parallax Screen -->
+                        <div class="features">
+                                <h1>Data Scientists</h1>
+                                <p>The best Data in the business giving you better insights than any other site in the market place.</p>
+                        </div>
+                </div>
+                <div class="col-sm-12 nopadding">
+                        <div class="features">
+                                <h1>Personal Analysis</h1>
+                                <p>Back test all of your choices and get personalized information, allowing you to know 
+what is working and making you money.</p>
+                        </div>
+                </div>
+            </div>
+        <!-- End Parallax Screen -->
 
 	<!-- As Seen On (to be used when DC is featured) -->
 			<!-- <div> 

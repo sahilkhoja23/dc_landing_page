@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery-2.1.4.min.js
 //= require wow.min.js
+//= require jquery.stellar.min.js
 //= require_tree .

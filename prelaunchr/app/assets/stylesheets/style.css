@@ -5,13 +5,20 @@
 html, body {
 	margin: 0;
 	padding: 0;
-<<<<<<< HEAD
-  padding-left: 0;
-=======
+  	padding-left: 0;
 	background: #F1F2F3;
->>>>>>> 2495ee20baff5926c91bdaab53c27a113973dd28
-;
-	background: #F1F2F3;
+  overflow-x: hidden;
+
+}
+
+
+.threeicons {
+    background-color: white;
+	
+    padding-top: 20px;    padding-bottom: 20px;    margin-top: 30px;    margin-bottom: 30px;    opacity: .9;
+    
+    display: table; 
+    width: 100%;
 }
 .features h1 {
 	font-family: 'Roboto', sans-serif;
@@ -25,8 +32,26 @@ html, body {
 	font-weight: 400;
 	text-align: center;
 	font-size: 2em;
-	margin: 45px 200px 41px;
-
+}
+@media screen and (max-width: 768px) {
+    .features p {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .features h1 {
+        font-size: 5em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .slogan2 h1 {
+        font-size: 5em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .reference h1 {
+        font-size: 5em;
+    }
 }
 
 .features {
@@ -36,6 +61,7 @@ html, body {
   	margin-top: 30px;
   	margin-bottom: 30px;
   	opacity: .9;
+    width: 100%;
 }
 
 .container {
@@ -45,16 +71,20 @@ html, body {
 
 .header {
 	background-image: url(/assets/home/rageon.png);
+
 	background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 0em -30em;
+  
+	background-repeat: no-repeat;
+  
  
 }
-
 .Parallax {
-	background-image: url(/assets/home/Textured_Background-grayscale.jpg);
-	background-size: auto;
-	background-repeat: no-repeat;
+	background-image: url(/assets/home/Textured_Background-grayscale.jpg);                         
+	background-size: 100%;
+  background-attachment: fixed;
+  top:0;
+  left:0;
+  z-index: -1;
 }
 
 .Parallax div:first-child {
@@ -71,8 +101,8 @@ html, body {
 }
  .logo {
  	width: 163px;
- 	padding-top: 12em;
- 	padding-bottom: 4em;
+ 	padding-top: 19em;
+ 	padding-bottom: 2em;
 }
 
 .slogan {
@@ -85,12 +115,10 @@ html, body {
 }
 
 .emailInput {
-	font-size: 23px;
-        font-family: 'Roboto', Sans-serif;
 	width: 32em;
 	height: 3em;
 	padding: 10px;
-	padding-bottom: 1em;
+	padding-bottom: 1em; 
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -145,7 +173,7 @@ input[type="text"]
 	top: 6px;
 	padding-left: 38px;
 	padding-right: 38px;
-	font-size: 23px;
+	font-size: 24px;
 	font-family: 'Roboto', Sans-serif;
 	background: #FFC147;
 	border: none;
@@ -279,19 +307,22 @@ iframe {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
   min-height: 67px;
   margin-bottom: 0px;
   background-image: url(/assets/home/emailnav.png);
   background-color: black;
-  /* background-size: 100%; */
+  background-size: 100% 70% auto;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 9999;
 }
 
 .leftnavbar {
-  position: relative;
+  position: fixed;
+  opacity: 0.8;
+  width: 100%;
   min-height: 67px;
   margin-bottom: 0px;
   background-image: url(/assets/home/navbar.jpg);
@@ -310,12 +341,12 @@ iframe {
 figcaption {
     text-align: center;
 	
-    display: table-caption;
     padding-top: 2em;
     font-family: 'Roboto', SANS-SERIF;
     font-size: 2em;
     width: 362px;
-    margin-left: -3em;
+    display: inline-grid;
+    /* margin-left: -2.5em; */
 }
 
 /*VISIT HTML*/
@@ -373,7 +404,7 @@ figcaption {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 
-  font-size: 7em;
+  font-size: 5em;
   margin-bottom: 1em;
 }
 
@@ -395,3 +426,4 @@ h3 {
 a {
 	text-decoration: none;
 }
+
