@@ -6,6 +6,11 @@
 	
 	<script src="<%= @url %>/assets/jquery-2.1.4.min.js"></script>
 	<script src="<%= @url %>/assets/jquery.stellar.min.js"></script>
+    <script src="<%= @url %>/assets/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
 	<!-- Youtube Initializer -->
 	<script>
 
@@ -45,6 +50,7 @@
 	<link rel="stylesheet" type="text/css" href="<%= @url %>/assets/style.css">
 	<link rel="stylesheet" type="text/css" href="<%= @url %>/assets/animations.css">
 	<link rel="stylesheet" href="<%= @url %>/assets/animate.css">
+    <meta name="viewport" content="width=device-width">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="<%= @url %>/assets/favicon.png" type="image/x-icon" />
@@ -109,21 +115,21 @@
         <!-- Parallax Screen -->
             <div class="row Parallax nopadding" data-stellar-background-ratio="0.2">
                         <div class="threeicons">
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-4 col-sm-12 wow zoomIn data-wow-duration="2s"">
                                         <center>
                                                 <img src="<%= @url %>/assets/home/clock.png" style="position: relative;  visibility: visible;">
                                                 <figcaption>Spend Less Time Researching</figcaption>
                                         </center>
                                 </div>
 
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-4 col-sm-12 wow zoomIn data-wow-duration="2s"">
                                         <center>
                                                 <img src="<%= @url %>/assets/home/Graphs.png" style="position: relative; margin-top: 142px; visibility: visible;">
                                                         <figcaption>Analyze Complex Information</figcaption>
                                                 </center>
                                 </div>
 
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-4 col-sm-12 wow zoomIn data-wow-duration="2s"">
                                         <center>
                                                 <img src="<%= @url %>/assets/home/Trophy.png" style="margin-top: 142px;visibility: visible;">
                                                 <figcaption>Gain a Competitive Edge</figcaption>
